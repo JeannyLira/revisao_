@@ -15,14 +15,13 @@ function checkForm() {
   const passwordValue = password.value.trim();
   const passwordConfirmationValue = passwordConfirmation.value.trim();
 
-  // Nome do usuário
   if (usernameValue === "") {
     errorInput(username, "O nome de usuário é obrigatório!");
   } else {
     successInput(username);
   }
 
-  // E-mail
+
   if (emailValue === "") {
     errorInput(email, "O email é obrigatório!");
   } else if (!checkEmail(emailValue)) {
@@ -31,7 +30,7 @@ function checkForm() {
     successInput(email);
   }
 
-  // Senha
+
   if (passwordValue === "") {
     errorInput(password, "A senha é obrigatória!");
   } else if (passwordValue.length < 6) {
@@ -40,7 +39,7 @@ function checkForm() {
     successInput(password);
   }
 
-  // Confirmação de senha
+
   if (passwordConfirmationValue === "") {
     errorInput(passwordConfirmation, "Confirme sua senha!");
   } else if (passwordConfirmationValue !== passwordValue) {
@@ -49,7 +48,7 @@ function checkForm() {
     successInput(passwordConfirmation);
   }
 
-  // Se tudo estiver ok
+
   const formControls = form.querySelectorAll(".form-content");
   const formIsValid = [...formControls].every((formControl) => {
     return formControl.classList.contains("success");
@@ -62,7 +61,7 @@ function checkForm() {
   }
 }
 
-// Função de erro
+
 function errorInput(input, message) {
   const formContent = input.parentElement;
   const a = formContent.querySelector("a");
@@ -71,13 +70,13 @@ function errorInput(input, message) {
   formContent.className = "form-content error";
 }
 
-// Função de sucesso
+
 function successInput(input) {
   const formContent = input.parentElement;
   formContent.className = "form-content success";
 }
 
-// Função para validar o email
+
 function checkEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(email);
