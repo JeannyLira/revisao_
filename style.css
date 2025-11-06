@@ -14,7 +14,7 @@ body{
 }
 
 .conteiner{
-    background-color: rgb(116, 181, 238);
+    background-color: rgb(20, 69, 112);
     border-radius: 14px;
     margin: 14px;
     max-width: 600px;
@@ -23,7 +23,7 @@ body{
 }
 
 .header{
-    background: linear-gradient(120deg, #3acbf0 0%, #8bb0ff 100%);
+    background: linear-gradient(120deg, #0067d5 0%, #4e7de3 100%);
     padding: 24px;
     text-align: center;
     color: #fff;
@@ -60,7 +60,7 @@ body{
 }
 
 .form button{
-    background-color: #8bb0ff;
+    background-color: #4261a4;
     color: #fff;
     width: 100%;
     border-radius: 14px;
